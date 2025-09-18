@@ -8,7 +8,7 @@ defaultAppearance = "dark"
 autoSwitchAppearance = false
 enableSearch = true
 enableCodeCopy = false
-enableA11y = true
+enableA11y = false
 replyByEmail = false
 
 mainSections = ["insights"]
