@@ -512,40 +512,115 @@ textarea::placeholder {
   }
 }
 
-/* Desktop devices (769px and up) */
+/* ================================= */
+/* AGGRESSIVE FULL-WIDTH FIXES FOR DESKTOP */
+/* ================================= */
+
+/* Force full width on all common layout containers */
 @media (min-width: 769px) {
-  .prose, 
-  .card,
+  .container,
+  .content,
+  .main,
+  .site-content,
+  .page-content,
+  .post-content,
+  .entry-content,
+  .article-content,
+  .content-area,
+  main,
+  #content,
+  #main,
+  .wrapper,
+  .site-wrapper,
+  .page-wrapper,
+  .content-wrapper,
+  .main-content,
+  .primary-content,
+  .single-content,
+  .page,
+  .post,
+  .entry,
   article,
-  .single_hero_basic,
-  .thumbnail_card {
-    padding: 2rem;
-    margin: 1rem 0;
-    border-radius: 24px;
+  .article,
+  section,
+  .section {
+    width: 95% !important; /* Use 95% of screen width */
+    max-width: 1400px !important; /* Set a generous max width */
+    margin: 0 auto !important; /* Center the content */
+    padding: 2rem 3rem !important; /* Add generous padding */
+    box-sizing: border-box !important;
   }
   
-  /* Restore desktop hover effects */
-  .card:hover,
-  article:hover,
-  .prose:hover {
-    transform: translateY(-4px);
-    background: rgba(30, 41, 59, 0.8);
-    box-shadow: 
-      0px 32px 64px 0px rgba(0, 0, 0, 0.4), 
-      inset 0px -3px 10px 0px rgba(0, 0, 0, 0.25), 
-      inset 0px 3px 10px 0px rgba(255, 255, 255, 0.08);
-    border-color: rgba(148, 163, 184, 0.3);
+  /* Specifically target prose and text content */
+  .prose,
+  .content-text,
+  .text-content,
+  .main-text,
+  .post-text {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
   }
   
-  .menu:hover,
-  nav:hover,
-  .navigation:hover {
-    transform: translateY(-1px);
-    background: rgba(51, 65, 85, 0.7);
-    box-shadow: 
-      0px 12px 24px 0px rgba(0, 0, 0, 0.25), 
-      inset 0px -2px 6px 0px rgba(0, 0, 0, 0.2), 
-      inset 0px 2px 6px 0px rgba(255, 255, 255, 0.06);
+  /* Override any theme-specific constraints */
+  .site {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  
+  /* Force containers to use available space */
+  body > *,
+  #app > *,
+  .app > *,
+  .root > * {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+/* ================================= */
+/* ULTRA-WIDE SCREEN OPTIMIZATION */
+/* ================================= */
+
+@media (min-width: 1200px) {
+  .container,
+  .content,
+  .main,
+  .site-content,
+  .page-content,
+  .post-content,
+  .entry-content,
+  .article-content,
+  .content-area,
+  main,
+  #content,
+  #main,
+  .wrapper,
+  .site-wrapper {
+    width: 90% !important;
+    max-width: 1600px !important;
+    padding: 3rem 4rem !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container,
+  .content,
+  .main,
+  .site-content,
+  .page-content,
+  .post-content,
+  .entry-content,
+  .article-content,
+  .content-area,
+  main,
+  #content,
+  #main,
+  .wrapper,
+  .site-wrapper {
+    width: 85% !important;
+    max-width: 2000px !important;
+    padding: 4rem 5rem !important;
   }
 }
 
@@ -659,7 +734,97 @@ header,
 }
 
 /* ================================= */
-/* ADDITIONAL SITE-SPECIFIC FIXES */
+/* RESTORE DESKTOP EFFECTS WITH FULL WIDTH */
+/* ================================= */
+
+/* Desktop devices (769px and up) - Restore Effects */
+@media (min-width: 769px) {
+  .prose, 
+  .card,
+  article,
+  .single_hero_basic,
+  .thumbnail_card {
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 24px;
+  }
+  
+  /* Restore desktop hover effects */
+  .card:hover,
+  article:hover,
+  .prose:hover {
+    transform: translateY(-4px);
+    background: rgba(30, 41, 59, 0.8);
+    box-shadow: 
+      0px 32px 64px 0px rgba(0, 0, 0, 0.4), 
+      inset 0px -3px 10px 0px rgba(0, 0, 0, 0.25), 
+      inset 0px 3px 10px 0px rgba(255, 255, 255, 0.08);
+    border-color: rgba(148, 163, 184, 0.3);
+  }
+  
+  .menu:hover,
+  nav:hover,
+  .navigation:hover {
+    transform: translateY(-1px);
+    background: rgba(51, 65, 85, 0.7);
+    box-shadow: 
+      0px 12px 24px 0px rgba(0, 0, 0, 0.25), 
+      inset 0px -2px 6px 0px rgba(0, 0, 0, 0.2), 
+      inset 0px 2px 6px 0px rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* ================================= */
+/* NUCLEAR OPTION - OVERRIDE EVERYTHING */
+/* ================================= */
+
+/* Force full width on absolutely everything */
+* {
+  box-sizing: border-box !important;
+}
+
+/* Override inline styles and framework constraints */
+[style*="max-width"],
+[style*="width"] {
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Common framework overrides */
+.col,
+.col-*,
+.column,
+.columns,
+[class*="col-"],
+[class*="grid-"] {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Bootstrap/Tailwind/Foundation overrides */
+.container-fluid,
+.max-w-*,
+.w-*,
+[class*="max-w-"],
+[class*="w-"] {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+@media (min-width: 769px) {
+  .container-fluid,
+  .max-w-*,
+  .w-*,
+  [class*="max-w-"],
+  [class*="w-"] {
+    width: 95% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ================================= */
+/* SITE-SPECIFIC FIXES + FRAMEWORK OVERRIDES */
 /* ================================= */
 
 /* Hugo/Jekyll/Static site fixes */
@@ -683,6 +848,24 @@ header,
   max-width: none !important;
 }
 
+/* Netlify/Gatsby/Next.js fixes */
+#___gatsby,
+#__next,
+.gatsby-app,
+.next-app {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* React/Vue app containers */
+#root,
+#app,
+.app,
+.application {
+  width: 100% !important;
+  max-width: none !important;
+}
+
 /* Fix for constrained text areas */
 .content-area,
 .entry-content,
@@ -699,9 +882,23 @@ header,
   .entry-content,
   .post-content,
   .article-content {
-    max-width: 800px !important;
+    width: 95% !important;
+    max-width: 1400px !important;
     margin: 0 auto !important;
-    padding: 2rem !important;
+    padding: 3rem !important;
+  }
+  
+  /* Specific fixes for insight pages and content-heavy pages */
+  .insights-content,
+  .resources-content,
+  .blog-content,
+  .post-list,
+  .article-list,
+  .content-list {
+    width: 95% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 }
 
