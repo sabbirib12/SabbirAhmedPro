@@ -12,6 +12,7 @@
 
 
 
+# -- Main Menu --
 [[main]]
 name = "Home"
 pageRef = "/"
@@ -23,54 +24,49 @@ pageRef = "/about"
 weight = 20
 
 [[main]]
-identifier = "insights" # <- Unique ID added here for the parent
+identifier = "insights"  # Parent identifier
 name = "Insights"
+pageRef = "/insights"    # Add this line
 weight = 30
 
 # ------- DROPDOWN ITEMS UNDER "INSIGHTS" -------
 [[main]]
 name = "All Insights"
 pageRef = "/insights"
-weight = 30
+parent = "insights"      # Reference parent
+weight = 31
 
 [[main]]
 name = "Professional Journey"
 pageRef = "/categories/professional-journey"
 parent = "insights"
-weight = 40
+weight = 32
 
 [[main]]
 name = "International Business"
 pageRef = "/categories/international-business"
 parent = "insights"
-weight = 50
+weight = 33
 
 [[main]]
 name = "Finance & Tax Updates"
 pageRef = "/categories/finance-tax-updates"
 parent = "insights"
-weight = 60
+weight = 34
 
 [[main]]
 name = "CA Journey & Exam Tips"
 pageRef = "/categories/ca-journey-exam-tips"
 parent = "insights"
-weight = 70
+weight = 35
 
 [[main]]
 name = "Professional Development"
 pageRef = "/categories/professional-development"
 parent = "insights"
-weight = 80
-# ------- END DROPDOWN -------
-
+weight = 36
 
 # -- Footer Menu --
-# The footer menu is displayed at the bottom of the page, just before
-# the copyright notice. Configure as per the main menu above.
-
-
-
 [[footer]]
 name = "About"
 pageRef = "/about"
@@ -91,8 +87,7 @@ name = "Facebook"
 url = "https://www.facebook.com/sabbir.ib1214"
 weight = 40
 
-
 [[footer]]
 name = "Reddit"
 url = "https://www.reddit.com/user/Sabbir_ahmed12/"
-weight = 40
+weight = 50

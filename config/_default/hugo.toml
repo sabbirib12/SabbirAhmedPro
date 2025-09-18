@@ -65,4 +65,4 @@ insights = "/insights/:slug/"
       type = 'fragments'
       weight = 10
 
-# googleAnalytics = "G-XXXXXXXXX"
+googleAnalytics = "G-1TTDB38HW5"
