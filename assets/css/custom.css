@@ -1,5 +1,6 @@
 /* Professional Dark Theme with Glassmorphism & Subtle Claymorphism */
 /* Optimized for readability and professional appearance */
+/* MOBILE-FIRST RESPONSIVE DESIGN */
 
 /* ================================= */
 /* Background - Professional Dark Gradient */
@@ -17,6 +18,11 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   color: #e2e8f0 !important; /* Light slate for default text */
+  
+  /* Mobile optimization */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* ================================= */
@@ -31,59 +37,67 @@ article,
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background: rgba(51, 65, 85, 0.85); /* Semi-transparent slate-800 */
-  border-radius: 24px;
-  border: 1px solid rgba(148, 163, 184, 0.2); /* Subtle slate border */
+  border-radius: 16px; /* Reduced for mobile */
+  border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow: 
-    0px 25px 50px 0px rgba(0, 0, 0, 0.3), 
+    0px 8px 24px 0px rgba(0, 0, 0, 0.3), 
     inset 0px -2px 8px 0px rgba(0, 0, 0, 0.2), 
     inset 0px 2px 8px 0px rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  margin: 1rem 0;
-  color: #f1f5f9; /* Very light slate for excellent readability */
+  padding: 1rem; /* Reduced padding for mobile */
+  margin: 0.75rem 0.5rem; /* Adjusted margins */
+  color: #f1f5f9;
   transition: all 0.3s ease;
+  max-width: calc(100vw - 1rem); /* Prevent overflow */
+  box-sizing: border-box;
 }
 
 /* ================================= */
-/* Header Styling */
+/* Header Styling - Mobile First */
 /* ================================= */
 
 .header,
 header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background: rgba(15, 23, 42, 0.8); /* Semi-transparent slate-900 */
-  border-radius: 0 0 24px 24px;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 0 0 16px 16px; /* Reduced radius for mobile */
   border-bottom: 1px solid rgba(148, 163, 184, 0.15);
   box-shadow: 
-    0px 10px 30px 0px rgba(0, 0, 0, 0.2), 
+    0px 4px 12px 0px rgba(0, 0, 0, 0.2), 
     inset 0px -1px 4px 0px rgba(0, 0, 0, 0.1),
     inset 0px 1px 4px 0px rgba(255, 255, 255, 0.03);
-  color: #f8fafc; /* Near white for header text */
+  color: #f8fafc;
+  padding: 0.75rem 1rem; /* Mobile-friendly padding */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* ================================= */
-/* Navigation Elements */
+/* Navigation Elements - Mobile Optimized */
 /* ================================= */
 
 .menu,
 nav,
 .navigation {
-  background: rgba(51, 65, 85, 0.6); /* Semi-transparent slate-700 */
+  background: rgba(51, 65, 85, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 16px;
+  border-radius: 12px; /* Reduced radius */
   border: 1px solid rgba(148, 163, 184, 0.15);
   box-shadow: 
-    0px 8px 20px 0px rgba(0, 0, 0, 0.2), 
+    0px 4px 12px 0px rgba(0, 0, 0, 0.2), 
     inset 0px -1px 4px 0px rgba(0, 0, 0, 0.15),
     inset 0px 1px 4px 0px rgba(255, 255, 255, 0.05);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem; /* Reduced padding */
   margin: 0.5rem;
   color: #e2e8f0;
+  overflow-x: auto; /* Allow horizontal scroll if needed */
+  white-space: nowrap;
 }
 
 /* ================================= */
-/* Button Styling - Subtle Blend */
+/* Button Styling - Touch-Friendly */
 /* ================================= */
 
 .btn,
@@ -91,13 +105,13 @@ button,
 input[type="button"],
 input[type="submit"],
 .button {
-  background: rgba(71, 85, 105, 0.8); /* Subtle slate-600 - blends naturally */
+  background: rgba(71, 85, 105, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 12px;
+  border-radius: 8px; /* Slightly reduced */
   border: 1px solid rgba(148, 163, 184, 0.25);
-  color: #e2e8f0; /* Light text for readability */
-  padding: 0.75rem 1.5rem;
+  color: #e2e8f0;
+  padding: 0.875rem 1.25rem; /* Touch-friendly sizing */
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -105,13 +119,23 @@ input[type="submit"],
     0px 2px 8px 0px rgba(0, 0, 0, 0.15),
     inset 0px -1px 3px 0px rgba(0, 0, 0, 0.2),
     inset 0px 1px 3px 0px rgba(255, 255, 255, 0.05);
+  min-height: 44px; /* iOS touch target minimum */
+  min-width: 44px;
+  font-size: 16px; /* Prevent zoom on iOS */
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn:hover,
+.btn:active,
 button:hover,
+button:active,
 input[type="button"]:hover,
+input[type="button"]:active,
 input[type="submit"]:hover,
-.button:hover {
+input[type="submit"]:active,
+.button:hover,
+.button:active {
   transform: translateY(-1px);
   background: rgba(71, 85, 105, 0.9);
   border-color: rgba(148, 163, 184, 0.4);
@@ -122,65 +146,100 @@ input[type="submit"]:hover,
 }
 
 /* ================================= */
-/* Typography - Optimized for Readability */
+/* Typography - Mobile Optimized */
 /* ================================= */
 
 body, p, li, span, div, input, textarea {
-  color: #e2e8f0; /* Light slate - excellent readability on dark */
+  color: #e2e8f0;
+  font-size: 16px; /* Base font size to prevent zoom */
+  line-height: 1.5; /* Better readability on mobile */
 }
 
-/* Headings with proper contrast */
+/* Responsive headings */
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
 article h1, article h2, article h3, article h4, article h5, article h6,
 h1, h2, h3, h4, h5, h6 {
-  color: #f8fafc; /* Near white for headings */
+  color: #f8fafc;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   font-weight: 600;
   letter-spacing: -0.025em;
+  line-height: 1.3;
+  margin: 1rem 0 0.5rem 0;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
-/* Links - Professional styling */
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+/* Links - Touch-friendly */
 a {
-  color: #60a5fa; /* Blue-400 - excellent visibility on dark */
+  color: #60a5fa;
   text-decoration: none;
   border-bottom: 1px solid rgba(96, 165, 250, 0.3);
   transition: all 0.3s ease;
+  padding: 0.125rem 0; /* Increase touch target */
+  display: inline-block;
+  word-break: break-word;
 }
 
-a:hover {
-  color: #93c5fd; /* Blue-300 on hover */
+a:hover,
+a:active {
+  color: #93c5fd;
   border-bottom-color: rgba(147, 197, 253, 0.6);
 }
 
 /* ================================= */
-/* Form Elements - Dark Theme Optimized */
+/* Form Elements - Mobile Optimized */
 /* ================================= */
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
 textarea,
 select {
-  background: rgba(51, 65, 85, 0.7); /* Semi-transparent slate-700 */
+  background: rgba(51, 65, 85, 0.7);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 12px;
-  color: #f1f5f9; /* Light text */
-  padding: 0.75rem;
+  border-radius: 8px;
+  color: #f1f5f9;
+  padding: 0.875rem; /* Touch-friendly */
   transition: all 0.3s ease;
   box-shadow: 
     inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 16px; /* Prevent zoom on iOS */
+  min-height: 44px; /* iOS touch target */
+  -webkit-appearance: none;
+  -webkit-border-radius: 8px; /* iOS override */
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: rgba(96, 165, 250, 0.5); /* Blue focus border */
+  border-color: rgba(96, 165, 250, 0.5);
   background: rgba(51, 65, 85, 0.8);
   box-shadow: 
     inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
@@ -189,59 +248,164 @@ select:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(148, 163, 184, 0.7); /* Muted slate placeholder */
+  color: rgba(148, 163, 184, 0.7);
 }
 
 /* ================================= */
-/* Hover Effects - Refined */
+/* Mobile-Specific Breakpoints */
 /* ================================= */
 
-.card:hover,
-article:hover,
-.prose:hover {
-  transform: translateY(-4px);
-  background: rgba(30, 41, 59, 0.8);
-  box-shadow: 
-    0px 32px 64px 0px rgba(0, 0, 0, 0.4), 
-    inset 0px -3px 10px 0px rgba(0, 0, 0, 0.25), 
-    inset 0px 3px 10px 0px rgba(255, 255, 255, 0.08);
-  border-color: rgba(148, 163, 184, 0.3);
+/* Small mobile devices (320px and up) */
+@media (max-width: 480px) {
+  .prose, 
+  .card,
+  article,
+  .single_hero_basic,
+  .thumbnail_card {
+    padding: 0.75rem;
+    margin: 0.5rem 0.25rem;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  .btn,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  .button {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.125rem; }
+  h4, h5, h6 { font-size: 1rem; }
+  
+  body, p, li, span, div {
+    font-size: 14px;
+  }
+  
+  .header,
+  header {
+    padding: 0.5rem;
+    border-radius: 0 0 8px 8px;
+  }
 }
 
-.menu:hover,
-nav:hover,
-.navigation:hover {
-  transform: translateY(-1px);
-  background: rgba(51, 65, 85, 0.7);
-  box-shadow: 
-    0px 12px 24px 0px rgba(0, 0, 0, 0.25), 
-    inset 0px -2px 6px 0px rgba(0, 0, 0, 0.2), 
-    inset 0px 2px 6px 0px rgba(255, 255, 255, 0.06);
+/* Tablet devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .prose, 
+  .card,
+  article,
+  .single_hero_basic,
+  .thumbnail_card {
+    padding: 1.25rem;
+    margin: 0.75rem 0.5rem;
+    border-radius: 16px;
+  }
+  
+  .btn,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  .button {
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+/* Desktop devices (769px and up) */
+@media (min-width: 769px) {
+  .prose, 
+  .card,
+  article,
+  .single_hero_basic,
+  .thumbnail_card {
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 24px;
+  }
+  
+  /* Restore desktop hover effects */
+  .card:hover,
+  article:hover,
+  .prose:hover {
+    transform: translateY(-4px);
+    background: rgba(30, 41, 59, 0.8);
+    box-shadow: 
+      0px 32px 64px 0px rgba(0, 0, 0, 0.4), 
+      inset 0px -3px 10px 0px rgba(0, 0, 0, 0.25), 
+      inset 0px 3px 10px 0px rgba(255, 255, 255, 0.08);
+    border-color: rgba(148, 163, 184, 0.3);
+  }
+  
+  .menu:hover,
+  nav:hover,
+  .navigation:hover {
+    transform: translateY(-1px);
+    background: rgba(51, 65, 85, 0.7);
+    box-shadow: 
+      0px 12px 24px 0px rgba(0, 0, 0, 0.25), 
+      inset 0px -2px 6px 0px rgba(0, 0, 0, 0.2), 
+      inset 0px 2px 6px 0px rgba(255, 255, 255, 0.06);
+  }
 }
 
 /* ================================= */
-/* Subtle Animations */
+/* Touch and Mobile Interactions */
+/* ================================= */
+
+/* Remove hover effects on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover,
+  article:hover,
+  .prose:hover,
+  .menu:hover,
+  nav:hover,
+  .navigation:hover {
+    transform: none;
+    background: initial;
+    box-shadow: initial;
+    border-color: initial;
+  }
+  
+  /* Add active states instead */
+  .card:active,
+  article:active,
+  .prose:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* ================================= */
+/* Subtle Animations - Reduced on Mobile */
 /* ================================= */
 
 @keyframes gentleFloat {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1px); }
+  50% { transform: translateY(-0.5px); } /* Reduced movement for mobile */
 }
 
-.card,
-article,
-.prose {
-  animation: gentleFloat 8s ease-in-out infinite;
-}
-
-.card:nth-child(2n),
-article:nth-child(2n) {
-  animation-delay: -2.5s;
-}
-
-.card:nth-child(3n),
-article:nth-child(3n) {
-  animation-delay: -5s;
+/* Only apply animations on larger screens */
+@media (min-width: 769px) {
+  .card,
+  article,
+  .prose {
+    animation: gentleFloat 8s ease-in-out infinite;
+  }
+  
+  .card:nth-child(2n),
+  article:nth-child(2n) {
+    animation-delay: -2.5s;
+  }
+  
+  .card:nth-child(3n),
+  article:nth-child(3n) {
+    animation-delay: -5s;
+  }
 }
 
 /* ================================= */
@@ -273,5 +437,52 @@ article:nth-child(3n) {
   
   body, p, li, span, div {
     color: #ffffff;
+  }
+}
+
+/* ================================= */
+/* Safe Area Support (for notched phones) */
+/* ================================= */
+
+/* Support for iPhone notches and Android punch holes */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.header,
+header {
+  padding-left: calc(1rem + env(safe-area-inset-left));
+  padding-right: calc(1rem + env(safe-area-inset-right));
+  padding-top: calc(0.75rem + env(safe-area-inset-top));
+}
+
+/* ================================= */
+/* Performance Optimizations */
+/* ================================= */
+
+/* Hardware acceleration for smoother animations */
+.prose, 
+.card,
+article,
+.single_hero_basic,
+.thumbnail_card,
+.btn,
+button {
+  will-change: transform;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Optimize backdrop filters on older devices */
+@media (max-width: 480px) {
+  .prose, 
+  .card,
+  article,
+  .single_hero_basic,
+  .thumbnail_card {
+    backdrop-filter: blur(8px); /* Reduced blur for performance */
+    -webkit-backdrop-filter: blur(8px);
   }
 }
