@@ -25,14 +25,12 @@ weight = 20
 [[main]]
 identifier = "insights" # <- Unique ID added here for the parent
 name = "Insights"
-pageRef = "/insights"
 weight = 30
 
 # ------- DROPDOWN ITEMS UNDER "INSIGHTS" -------
 [[main]]
 name = "All Insights"
 pageRef = "/insights"
-parent = "insights" # <- This makes it a child of the "insights" parent
 weight = 10
 
 [[main]]
