@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: sabbirib12/SabbirAhmedPro # Replace with your GitHub username/repo
 
 media_folder: static/img
 public_folder: /img
@@ -44,6 +44,6 @@ collections:
           - { label: "Description", name: "description", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
-site_url: https://sabbirahmed.pro
-display_url: https://sabbirahmed.pro
-logo_url: https://sabbirahmed.pro/img/sabbir_ahmed.jpg
+site_url: https://sabbirahmedpro.netlify.app
+display_url: https://sabbirahmedpro.netlify.app
+logo_url: https://sabbirahmedpro.netlify.app/img/sabbir_ahmed.jpg
