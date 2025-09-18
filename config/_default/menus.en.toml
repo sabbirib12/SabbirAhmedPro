@@ -31,37 +31,37 @@ weight = 30
 [[main]]
 name = "All Insights"
 pageRef = "/insights"
-weight = 10
+weight = 30
 
 [[main]]
 name = "Professional Journey"
 pageRef = "/categories/professional-journey"
 parent = "insights"
-weight = 20
+weight = 40
 
 [[main]]
 name = "International Business"
 pageRef = "/categories/international-business"
 parent = "insights"
-weight = 30
+weight = 50
 
 [[main]]
 name = "Finance & Tax Updates"
 pageRef = "/categories/finance-tax-updates"
 parent = "insights"
-weight = 40
+weight = 60
 
 [[main]]
 name = "CA Journey & Exam Tips"
 pageRef = "/categories/ca-journey-exam-tips"
 parent = "insights"
-weight = 50
+weight = 70
 
 [[main]]
 name = "Professional Development"
 pageRef = "/categories/professional-development"
 parent = "insights"
-weight = 60
+weight = 80
 # ------- END DROPDOWN -------
 
 
