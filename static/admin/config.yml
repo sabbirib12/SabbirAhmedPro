@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "insights"
+    label: "Insights"
+    folder: "content/insights"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Featured Image", name: "featureimage", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "select",
+          multiple: true,
+          options: [
+            "Professional Journey",
+            "International Business", 
+            "Finance & Tax Updates",
+            "CA Journey & Exam Tips",
+            "Professional Development"
+          ]
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/about/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+site_url: https://sabbirahmed.pro
+display_url: https://sabbirahmed.pro
+logo_url: https://sabbirahmed.pro/img/sabbir_ahmed.jpg
