@@ -3,8 +3,8 @@ backend:
   repo: sabbirib12/SabbirAhmedPro # Your GitHub username/repo
   branch: main
   # ADD THESE TWO LINES:
-  base_url: https://sabbirahmedpro.netlify.app
-  auth_endpoint: api/oauth/authorize
+base_url: https://sabbirahmedpro.netlify.app
+auth_endpoint: api/oauth/authorize
 
 media_folder: static/img
 public_folder: /img
