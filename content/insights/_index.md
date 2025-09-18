@@ -5,13 +5,16 @@ showTableOfContents: false
 showBreadcrumbs: true
 ---
 
-Welcome to my insights hub, where I share knowledge gained from my journey in accounting, finance, and international business. This space is designed to provide valuable perspectives for fellow professionals, aspiring chartered accountants, and anyone interested in the evolving world of business and finance.
+This section brings together lessons and reflections from my journey in accounting, finance, and international business.
 
-## What You'll Find Here
 
-Through my academic background at the University of Dhaka and practical experience in the CA journey, I've gathered insights that I believe can benefit others on similar paths. My content focuses on bridging theoretical knowledge with real-world application, offering both strategic perspectives and practical guidance.
+## Explore by Category
 
-Whether you're navigating the complexities of international business, staying updated with the latest financial regulations, or beginning your chartered accountancy journey, you'll find resources tailored to support your professional growth.
+* **Professional Journey** – Reflections on experiences, challenges, and lessons that shaped my path in accounting and business.
+* **International Business** – Perspectives on global markets, trade dynamics, and strategies relevant to today's interconnected economy.
+* **Finance & Tax Updates** – Simplified explanations of key regulatory changes, tax updates, and their practical implications.
+* **CA Journey & Exam Tips** – Guidance and strategies for aspiring chartered accountants, from study techniques to exam insights.
+* **Professional Development** – Skills, tools, and resources to grow as a well-rounded professional in business and finance.
 
 ## My Approach
 
