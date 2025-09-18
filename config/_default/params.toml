@@ -1,0 +1,78 @@
+
+#Started from here
+#colorScheme = "custom"
+
+custom_css = ["css/schemes/custom.css"]
+
+
+enableSearch = true
+enableCodeCopy = false
+enableA11y = true
+replyByEmail = false
+
+mainSections = ["insights"]
+showViews = false
+showLikes = false
+robots = "index, follow"
+
+defaultBackgroundImage = "img/background.png"
+defaultFeaturedImage = "img/featured"
+highlightCurrentMenuArea = true
+smartTOC = true
+
+[header]
+layout = "fixed-fill-blur" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+
+[footer]
+showMenu = true
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+[homepage]
+layout = "card"
+homepageImage = "img/sabbir_ahmed.jpg"
+showRecent = false
+showRecentItems = 0
+showMoreLink = false
+showMoreLinkDest = "/insights"
+cardView = true
+cardViewScreenWidth = true
+
+[params.article]
+showDate = true
+showViews = false
+showLikes = false
+showDateUpdated = true
+showAuthor = true
+showHero = true
+heroStyle = "basic"
+showBreadcrumbs = true
+showDraftLabel = true
+showEdit = false
+showHeadingAnchors = true
+showPagination = true
+invertPagination = false
+showReadingTime = true
+showTableOfContents = true
+showRelatedContent = true
+relatedContentLimit = 3
+showTaxonomies = true
+showAuthorsBadges = false
+showWordCount = true
+showComments = false
+sharingLinks = ["linkedin", "twitter", "facebook", "reddit", "email"]
+
+[params.list]
+showHero = false
+showBreadcrumbs = true
+showSummary = true
+showViews = false
+showLikes = false
+showTableOfContents = false
+showCards = true
+groupByYear = false
+cardView = true
+cardViewScreenWidth = false
+constrainItemsWidth = false

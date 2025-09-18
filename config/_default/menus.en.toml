@@ -1,0 +1,100 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+
+
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 20
+
+[[main]]
+identifier = "insights" # <- Unique ID added here for the parent
+name = "Insights"
+pageRef = "/insights"
+weight = 30
+
+# ------- DROPDOWN ITEMS UNDER "INSIGHTS" -------
+[[main]]
+name = "All Insights"
+pageRef = "/insights"
+parent = "insights" # <- This makes it a child of the "insights" parent
+weight = 10
+
+[[main]]
+name = "Professional Journey"
+pageRef = "/categories/professional-journey"
+parent = "insights"
+weight = 20
+
+[[main]]
+name = "International Business"
+pageRef = "/categories/international-business"
+parent = "insights"
+weight = 30
+
+[[main]]
+name = "Finance & Tax Updates"
+pageRef = "/categories/finance-tax-updates"
+parent = "insights"
+weight = 40
+
+[[main]]
+name = "CA Journey & Exam Tips"
+pageRef = "/categories/ca-journey-exam-tips"
+parent = "insights"
+weight = 50
+
+[[main]]
+name = "Professional Development"
+pageRef = "/categories/professional-development"
+parent = "insights"
+weight = 60
+# ------- END DROPDOWN -------
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+
+[[footer]]
+name = "About"
+pageRef = "/about"
+weight = 10
+
+[[footer]]
+name = "Contact"
+url = "mailto:sabbir@sabbirahmed.pro"
+weight = 20
+
+[[footer]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/sabbir-ib12"
+weight = 30
+
+[[footer]]
+name = "Facebook"
+url = "https://www.facebook.com/sabbir.ib1214"
+weight = 40
+
+
+[[footer]]
+name = "Reddit"
+url = "https://www.reddit.com/user/Sabbir_ahmed12/"
+weight = 40

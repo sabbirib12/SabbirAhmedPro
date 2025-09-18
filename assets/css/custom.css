@@ -1,0 +1,277 @@
+/* Professional Dark Theme with Glassmorphism & Subtle Claymorphism */
+/* Optimized for readability and professional appearance */
+
+/* ================================= */
+/* Background - Professional Dark Gradient */
+/* ================================= */
+/* Force the background */
+body {
+  background: linear-gradient(180deg, 
+    #0f172a 0%,   /* Slate-900 at top */
+    #1e293b 33%,  /* Slate-800 */
+    #334155 66%,  /* Slate-700 */
+    #475569 100%  /* Slate-600 at bottom */
+  ) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #e2e8f0 !important; /* Light slate for default text */
+}
+
+/* ================================= */
+/* Glassmorphism Cards with Subtle Claymorphism */
+/* ================================= */
+
+.prose, 
+.card,
+article,
+.single_hero_basic,
+.thumbnail_card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(51, 65, 85, 0.85); /* Semi-transparent slate-800 */
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.2); /* Subtle slate border */
+  box-shadow: 
+    0px 25px 50px 0px rgba(0, 0, 0, 0.3), 
+    inset 0px -2px 8px 0px rgba(0, 0, 0, 0.2), 
+    inset 0px 2px 8px 0px rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  margin: 1rem 0;
+  color: #f1f5f9; /* Very light slate for excellent readability */
+  transition: all 0.3s ease;
+}
+
+/* ================================= */
+/* Header Styling */
+/* ================================= */
+
+.header,
+header {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(15, 23, 42, 0.8); /* Semi-transparent slate-900 */
+  border-radius: 0 0 24px 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 
+    0px 10px 30px 0px rgba(0, 0, 0, 0.2), 
+    inset 0px -1px 4px 0px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px 0px rgba(255, 255, 255, 0.03);
+  color: #f8fafc; /* Near white for header text */
+}
+
+/* ================================= */
+/* Navigation Elements */
+/* ================================= */
+
+.menu,
+nav,
+.navigation {
+  background: rgba(51, 65, 85, 0.6); /* Semi-transparent slate-700 */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 
+    0px 8px 20px 0px rgba(0, 0, 0, 0.2), 
+    inset 0px -1px 4px 0px rgba(0, 0, 0, 0.15),
+    inset 0px 1px 4px 0px rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  color: #e2e8f0;
+}
+
+/* ================================= */
+/* Button Styling - Subtle Blend */
+/* ================================= */
+
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+  background: rgba(71, 85, 105, 0.8); /* Subtle slate-600 - blends naturally */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #e2e8f0; /* Light text for readability */
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0px 2px 8px 0px rgba(0, 0, 0, 0.15),
+    inset 0px -1px 3px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 1px 3px 0px rgba(255, 255, 255, 0.05);
+}
+
+.btn:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.button:hover {
+  transform: translateY(-1px);
+  background: rgba(71, 85, 105, 0.9);
+  border-color: rgba(148, 163, 184, 0.4);
+  box-shadow: 
+    0px 4px 12px 0px rgba(0, 0, 0, 0.2),
+    inset 0px -1px 3px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 3px 0px rgba(255, 255, 255, 0.08);
+}
+
+/* ================================= */
+/* Typography - Optimized for Readability */
+/* ================================= */
+
+body, p, li, span, div, input, textarea {
+  color: #e2e8f0; /* Light slate - excellent readability on dark */
+}
+
+/* Headings with proper contrast */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
+article h1, article h2, article h3, article h4, article h5, article h6,
+h1, h2, h3, h4, h5, h6 {
+  color: #f8fafc; /* Near white for headings */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Links - Professional styling */
+a {
+  color: #60a5fa; /* Blue-400 - excellent visibility on dark */
+  text-decoration: none;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.3);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #93c5fd; /* Blue-300 on hover */
+  border-bottom-color: rgba(147, 197, 253, 0.6);
+}
+
+/* ================================= */
+/* Form Elements - Dark Theme Optimized */
+/* ================================= */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  background: rgba(51, 65, 85, 0.7); /* Semi-transparent slate-700 */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  color: #f1f5f9; /* Light text */
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(96, 165, 250, 0.5); /* Blue focus border */
+  background: rgba(51, 65, 85, 0.8);
+  box-shadow: 
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 0px 0px 3px rgba(96, 165, 250, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(148, 163, 184, 0.7); /* Muted slate placeholder */
+}
+
+/* ================================= */
+/* Hover Effects - Refined */
+/* ================================= */
+
+.card:hover,
+article:hover,
+.prose:hover {
+  transform: translateY(-4px);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 
+    0px 32px 64px 0px rgba(0, 0, 0, 0.4), 
+    inset 0px -3px 10px 0px rgba(0, 0, 0, 0.25), 
+    inset 0px 3px 10px 0px rgba(255, 255, 255, 0.08);
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.menu:hover,
+nav:hover,
+.navigation:hover {
+  transform: translateY(-1px);
+  background: rgba(51, 65, 85, 0.7);
+  box-shadow: 
+    0px 12px 24px 0px rgba(0, 0, 0, 0.25), 
+    inset 0px -2px 6px 0px rgba(0, 0, 0, 0.2), 
+    inset 0px 2px 6px 0px rgba(255, 255, 255, 0.06);
+}
+
+/* ================================= */
+/* Subtle Animations */
+/* ================================= */
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1px); }
+}
+
+.card,
+article,
+.prose {
+  animation: gentleFloat 8s ease-in-out infinite;
+}
+
+.card:nth-child(2n),
+article:nth-child(2n) {
+  animation-delay: -2.5s;
+}
+
+.card:nth-child(3n),
+article:nth-child(3n) {
+  animation-delay: -5s;
+}
+
+/* ================================= */
+/* Accessibility & Performance */
+/* ================================= */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  article,
+  .prose {
+    animation: none;
+  }
+  
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .prose, 
+  .card,
+  article,
+  .single_hero_basic,
+  .thumbnail_card {
+    border: 2px solid rgba(148, 163, 184, 0.5);
+  }
+  
+  body, p, li, span, div {
+    color: #ffffff;
+  }
+}
