@@ -75,22 +75,35 @@ I am currently focused on building a robust foundation in chartered accountancy 
 {{< /keywordList >}}
 
 ### 🛠️ Technical Skills
-{{< gallery >}}
-<div class="grid-w50">
-  {{< keywordList >}}
-  {{< keyword icon="file-excel" >}}📈Advanced Excel & Office Suite{{< /keyword >}}
-  {{< keyword icon="chart-bar" >}} 🛰️Power BI for Data Visualization{{< /keyword >}}
-  {{< keyword icon="palette" >}}🎨Adobe Creative Suite{{< /keyword >}}
-  {{< /keywordList >}}
-</div>
-<div class="grid-w50">
-  {{< keywordList >}}
-  {{< keyword icon="code" >}}Programming (C, Python, R){{< /keyword >}}
-  {{< keyword icon="database" >}}🐘 PostgreSQL Database{{< /keyword >}}
-  {{< keyword icon="language" >}}Multilingual (Bangla, English, Spanish){{< /keyword >}}
-  {{< /keywordList >}}
-</div>
-{{< /gallery >}}
+
+#### 📊 Data Analysis & Visualization
+{{< keywordList >}}
+{{< keyword icon="chart-bar" >}}Power BI for Data Visualization{{< /keyword >}}
+{{< keyword icon="python" >}}Python: NumPy, Pandas, OpenPyXL{{< /keyword >}}
+{{< keyword icon="file-excel" >}}Advanced Excel & Office Suite{{< /keyword >}}
+{{< keyword icon="table" >}}Excel Automation & Data Processing{{< /keyword >}}
+{{< /keywordList >}}
+
+#### 💻 Programming & Databases
+{{< keywordList >}}
+{{< keyword icon="code" >}}Programming Languages: C, Python, R{{< /keyword >}}
+{{< keyword icon="database" >}} 💾 PostgreSQL Database{{< /keyword >}}
+{{< keyword icon="git-branch" >}}Git Version Control{{< /keyword >}}
+{{< /keywordList >}}
+
+#### 🛠️ Tools & Platforms
+{{< keywordList >}}
+{{< keyword icon="terminal" >}}Linux (Ubuntu) Operations{{< /keyword >}}
+{{< keyword icon="file-text" >}}LaTeX for Document Typesetting{{< /keyword >}}
+{{< keyword icon="diagram" >}}Kroki Suite: Graphviz, PlantUML, Mermaid{{< /keyword >}}
+{{< keyword icon="flow-chart" >}}Flowcharts & UML Diagrams{{< /keyword >}}
+{{< /keywordList >}}
+
+#### 🎨 Design & Languages
+{{< keywordList >}}
+{{< keyword icon="palette" >}}Adobe Creative Suite{{< /keyword >}}
+{{< keyword icon="language" >}}Multilingual: Bangla, English, Spanish{{< /keyword >}}
+{{< /keywordList >}}
 
 
 ## 📈 Professional Development
